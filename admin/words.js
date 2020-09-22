@@ -1,4 +1,5 @@
 /*global systemDictionary:true */
+
 'use strict';
 
 systemDictionary = {
@@ -67,17 +68,17 @@ systemDictionary = {
         'zh-cn': 'Device Password'
     },
 
-    'Protocol': {
-        'en': 'Comunicaiton Protocol',
+    'Communication Protocol': {
+        'en': 'Communication Protocol',
         'de': 'Kommunikationsprotokoll',
-        'ru': 'Comunicaiton Protocol',
-        'pt': 'Comunicaiton Protocol',
-        'nl': 'Comunicaiton Protocol',
-        'fr': 'Comunicaiton Protocol',
-        'it': 'Comunicaiton Protocol',
-        'es': 'Comunicaiton Protocol',
-        'pl': 'Comunicaiton Protocol',
-        'zh-cn': 'Comunicaiton Protocol'
+        'ru': 'Communication Protocol',
+        'pt': 'Communication Protocol',
+        'nl': 'Communication Protocol',
+        'fr': 'Communication Protocol',
+        'it': 'Communication Protocol',
+        'es': 'Communication Protocol',
+        'pl': 'Communication Protocol',
+        'zh-cn': 'Communication Protocol'
     },
 
     'Polling Interval': {
@@ -105,4 +106,4 @@ systemDictionary = {
         'pl': 'msec',
         'zh-cn': 'msec'
     }
-  }
+}

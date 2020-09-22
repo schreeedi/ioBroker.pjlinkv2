@@ -1,7 +1,7 @@
 {
   "name": "iobroker.pjlinkv2",
-  "version": "2.0.1",
-  "description": "ioBroker PJLink Adapter, based on PJLink Specification V1.04",
+  "version": "2.0.3",
+  "description": "ioBroker PJLink adapter, supporting PJLink specification Cass 1 and Class 2",
   "author": {
     "name": "oberstel",
     "email": "oberstel@gmail.com"
