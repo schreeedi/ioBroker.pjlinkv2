@@ -46,11 +46,12 @@
         ],
         "keywords": [
             "ioBroker",
-            "template",
             "Smart Home",
-            "home automation"
-            "projector"
-            "beamer"
+            "home automation",
+            "projector",
+            "beamer",
+            "display",
+            "pjlink"
         ],
         "license": "MIT",
         "platform": "Javascript/Node.js",
