@@ -54,7 +54,7 @@ systemDictionary = {
         'zh-cn': 'default: 4352'
     },
 
-    'password': {
+    'Password': {
         'en': 'Device Password',
         'de': 'Geräte Kennwort',
         'ru': 'Device Password',
@@ -67,7 +67,7 @@ systemDictionary = {
         'zh-cn': 'Device Password'
     },
 
-    'protocol': {
+    'Protocol': {
         'en': 'Comunicaiton Protocol',
         'de': 'Kommunikationsprotokoll',
         'ru': 'Comunicaiton Protocol',
@@ -80,7 +80,7 @@ systemDictionary = {
         'zh-cn': 'Comunicaiton Protocol'
     },
 
-    'polltime': {
+    'Polling Interval': {
         'en': 'Polling Interval',
         'de': 'Polling Intervall',
         'ru': 'Polling Interval',
