@@ -1,5 +1,5 @@
-![Logo](../../Downloads/ioBroker.template-master/JavaScript/admin/template.png)
-# ioBroker.template
+![Logo](admin/pjlink.png)
+# ioBroker.PJLinkV2
 
 [![NPM version](http://img.shields.io/npm/v/iobroker.template.svg)](https://www.npmjs.com/package/iobroker.template)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.template.svg)](https://www.npmjs.com/package/iobroker.template)
@@ -12,85 +12,63 @@
 
 **Tests:**: [![Travis-CI](http://img.shields.io/travis/Author/ioBroker.template/master.svg)](https://travis-ci.org/Author/ioBroker.template)
 
-## template adapter for ioBroker
+# iobroker.pjlink
+This adapter controls any PJLink compatible projector or display with ioBroker.
 
-Template for adapter development
+PJLink is a unified standard for operating and controlling data projectors and displays. The protocol enables central control of certain devices, manufactured by different vendors. The protocol is used by NEC, Casio, Seiko, Sony, Panasonic, Hitachi, Mitsubishi, Ricoh, Vivitek and even more. Please consult the device manual to check compatibility.
 
-## Developer manual
-This section is intended for the developer. It can be deleted later
+## Current shortcomings
+- Error Handling is not implemented right now. If an unknown parameter is entered or if the device is not accessible using TCP/IP, an error will be shown in the ioBroker Log. In one of the future versions, the device errorcodes will be analyzed and translated.
+- Lighting hours are given for one (the first) lamp, even if PJLink supports several lamps. If somebody have a proper device, please contact me for testing.
+- The device is not pushing information using the PJLink protocol. Therefore, the adapter will pull certain information frequently (see
+polling interval). Do not reduce the polling interval <10 sec. because the device needs up to 2 sec. to answer and the script will query several paramters.
+- All dialogs are in English as for now, DE and RU are in progress. Further translations on demand.
 
-### Getting started
+## ToDo
+- Implementing a table to translate input ID to name of the port (like 31 = HDMI1)
+- Supporting PJLink Class 2 protocol
 
-You are almost done, only a few steps left:
-1. Create a new repository on GitHub with the name `ioBroker.template`
-1. Initialize the current folder as a new git repository:  
-    ```bash
-    git init
-    git add .
-    git commit -m "Initial commit"
-    ```
-1. Link your local repository with the one on GitHub:  
-    ```bash
-    git remote add origin https://github.com/Author/ioBroker.template
-    ```
+## How the adapter works
+The adapter consists by three elements:
+-	Admin interface to define device specific parameters (admin/index.html)
+-	JavaScript module for device communication, based on PJLink protocol (utils/pjlink.js)
+-	Main script (main.js)
 
-1. Push all files to the GitHub repo:  
-    ```bash
-    git push origin master
-    ```
-1. Add a new secret under https://github.com/Author/ioBroker.template/settings/secrets. It must be named `AUTO_MERGE_TOKEN` and contain a personal access token with push access to the repository, e.g. yours. You can create a new token under https://github.com/settings/tokens.
-
-1. Head over to [main.js](main.js) and start programming!
-
-### Best Practices
-We've collected some [best practices](https://github.com/ioBroker/ioBroker.repositories#development-and-coding-best-practices) regarding ioBroker development and coding in general. If you're new to ioBroker or Node.js, you should
-check them out. If you're already experienced, you should also take a look at them - you might learn something new :)
-
-### Scripts in `package.json`
-Several npm scripts are predefined for your convenience. You can run them using `npm run <scriptname>`
-| Script name | Description                                              |
-|-------------|----------------------------------------------------------|
-| `test:js`   | Executes the tests you defined in `*.test.js` files.     |
-| `test:package`    | Ensures your `package.json` and `io-package.json` are valid. |
-| `test` | Performs a minimal test run on package files and your tests. |
-| `lint` | Runs `ESLint` to check your code for formatting errors and potential bugs. |
-
-### Writing tests
-When done right, testing code is invaluable, because it gives you the 
-confidence to change your code while knowing exactly if and when 
-something breaks. A good read on the topic of test-driven development 
-is https://hackernoon.com/introduction-to-test-driven-development-tdd-61a13bc92d92. 
-Although writing tests before the code might seem strange at first, but it has very 
-clear upsides.
-
-The template provides you with basic tests for the adapter startup and package files.
-It is recommended that you add your own tests into the mix.
-
-### Publishing the adapter
-To get your adapter released in ioBroker, please refer to the documentation 
-of [ioBroker.repositories](https://github.com/ioBroker/ioBroker.repositories#requirements-for-adapter-to-get-added-to-the-latest-repository).
-
-### Test the adapter manually on a local ioBroker installation
-In order to install the adapter locally without publishing, the following steps are recommended:
-1. Create a tarball from your dev directory:  
-    ```bash
-    npm pack
-    ```
-1. Upload the resulting file to your ioBroker host
-1. Install it locally (The paths are different on Windows):
-    ```bash
-    cd /opt/iobroker
-    npm i /path/to/tarball.tgz
-    ```
-
-For later updates, the above procedure is not necessary. Just do the following:
-1. Overwrite the changed files in the adapter directory (`/opt/iobroker/node_modules/iobroker.template`)
-1. Execute `iobroker upload template` on the ioBroker host
+The Main script works in four steps:
+1)	Doing some initial configuration like creating ioBroker objects
+2)	Starring the first communication with the device and asking for the current parameters
+3)	Waiting for a state change like switching the input source or turning power off
+4)	Executing the change with the device
+Please be aware, that the communication with the projector is not possible if the projector is in standby with power saving feature enabled. Therefore, it will not be possible to turn the project on using this adapter. To do so, disable the power saving feature using the projector configuration (Menu > Settings...).
 
 ## Changelog
+### 2.0.0 (2020/09/22)
+- new development, based on ioBroker adapter template 
+
+### 0.2.0 (2019/11/15)
+- fixed an error where adapter instances started multiple times
+- fixed an issue when encrypted communicating ist used
+- changed datapoint "power" to be boolean, to start/stop the devices
+- added datapoint "status" to report the current status of the device (on, off, warm up, cool down, not connected)
+
+### 0.1.1 (2018/02/11)
+- errorhandling implemented (somekind of...)
+
+### 0.1.0 (2017/12/31)
+- first public flight (beta)
+
+### 0.0.5 (2017/12/26)
+- bugfixing
+
+### 0.0.3 (2017/12/23)
+- build admin interface
+- build translate table
+
+### 0.0.2 (2017/12/18)
+- redesign some timings (what / when)
 
 ### 0.0.1
-* (Author) initial release
+- Inital version
 
 ## License
 MIT License
