@@ -2,8 +2,19 @@
     "common": {
         "name": "pjlinkv2",
         "Title": "PJLinkV2",
-        "version": "2.0.3",
+        "version": "2.0.4",
         "news": {
+            "2.0.0": {
+                "en": "second major release",
+                "de": "Zweites Major Release",
+                "ru": "second major release",
+                "pt": "second major release",
+                "nl": "second major release",
+                "fr": "second major release",
+                "it": "second major release",
+                "es": "second major release",
+                "pl": "second major release",
+                "zh-cn": "second major release",
             "0.0.1": {
                 "en": "initial release",
                 "de": "Erstveröffentlichung",
@@ -23,27 +34,27 @@
             "de": "PJLinkV2 Adapter",
             "ru": "PJLinkV2 Adapter",
             "pt": "PJLinkV2 Adapter",
-            "nl": "Sjabloon (JavaScript)",
-            "fr": "Modèle (JavaScript)",
-            "it": "Modello (JavaScript)",
-            "es": "Plantilla (JavaScript)",
-            "pl": "Szablon (JavaScript)",
-            "zh-cn": "范本（JavaScript）"
+            "nl": "PJLinkV2 Adapter",
+            "fr": "PJLinkV2 Adapter",
+            "it": "PJLinkV2 Adapter",
+            "es": "PJLinkV2 Adapter",
+            "pl": "PJLinkV2 Adapter",
+            "zh-cn": "PJLinkV2 Adapter"
         },
         "desc": {
-            "en": "Template for adapter development",
-            "de": "Vorlage für die Adapterentwicklung",
-            "ru": "Шаблон для разработки адаптера",
-            "pt": "Modelo para desenvolvimento de adaptador",
-            "nl": "Sjabloon voor adapterontwikkeling",
-            "fr": "Modèle de développement d'adaptateur",
-            "it": "Modello per lo sviluppo dell'adattatore",
-            "es": "Plantilla para el desarrollo de adaptadores",
-            "pl": "Szablon do tworzenia adapterów",
-            "zh-cn": "适配器开发的模板"
+            "en": "Control any PJLink compatible projector or display",
+            "de": "Steuerung eines Projektors oder Displays der das PJLink Protokoll unterstützt",
+            "ru": "Control any PJLink compatible projector or display",
+            "pt": "Control any PJLink compatible projector or display",
+            "nl": "Control any PJLink compatible projector or display",
+            "fr": "Control any PJLink compatible projector or display",
+            "it": "Control any PJLink compatible projector or display",
+            "es": "Control any PJLink compatible projector or display",
+            "pl": "Control any PJLink compatible projector or display",
+            "zh-cn": "Control any PJLink compatible projector or display"
         },
         "authors": [
-            "Author <author@mail.com>"
+            "Author <oberstel@gmail.com>"
         ],
         "keywords": [
             "ioBroker",
@@ -57,7 +68,7 @@
         "license": "MIT",
         "platform": "Javascript/Node.js",
         "main": "main.js",
-        "icon": "template.png",
+        "icon": "pjlink.png",
         "enabled": true,
         "extIcon": "https://raw.githubusercontent.com/Author/ioBroker.template/master/admin/template.png",
         "readme": "https://github.com/Author/ioBroker.template/blob/master/README.md",
