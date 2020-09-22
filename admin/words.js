@@ -68,7 +68,7 @@ systemDictionary = {
         'zh-cn': 'Device Password'
     },
 
-    'Communication Protocol': {
+    'Device Protocol': {
         'en': 'Device Protocol',
         'de': 'Geräte Protokoll',
         'ru': 'Device Protocol',
