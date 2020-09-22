@@ -1,7 +1,7 @@
 {
     "common": {
-        "name": "template",
-        "version": "0.0.1",
+        "name": "PJLinkV2",
+        "version": "2.0.0",
         "news": {
             "0.0.1": {
                 "en": "initial release",
@@ -16,12 +16,12 @@
                 "zh-cn": "首次出版"
             }
         },
-        "title": "Template (JavaScript)",
+        "title": "PJLinkV2 Adapter",
         "titleLang": {
-            "en": "Template (JavaScript)",
-            "de": "Vorlage (JavaScript)",
-            "ru": "Шаблон (JavaScript)",
-            "pt": "Modelo (JavaScript)",
+            "en": "PJLinkV2 Adapter",
+            "de": "PJLinkV2 Adapter",
+            "ru": "PJLinkV2 Adapter",
+            "pt": "PJLinkV2 Adapter",
             "nl": "Sjabloon (JavaScript)",
             "fr": "Modèle (JavaScript)",
             "it": "Modello (JavaScript)",
@@ -49,6 +49,8 @@
             "template",
             "Smart Home",
             "home automation"
+            "projector"
+            "beamer"
         ],
         "license": "MIT",
         "platform": "Javascript/Node.js",
