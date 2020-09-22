@@ -3,9 +3,9 @@
 'use strict';
 
 systemDictionary = {
-    'PJLink adapter settings': {
+    'PJ Link adapter settings': {
         'en': 'Settings for PJLink Adapter',
-        'de': 'Einstellungen für PJLink Adapter',
+        'de': 'Einstellungen des PJLink Adapters',
         'ru': 'Настройки адаптера для PJLink Adapter',
         'pt': 'Configurações do adaptador para PJLink Adapter',
         'nl': 'Adapterinstellingen voor PJLink Adapter',
@@ -14,6 +14,19 @@ systemDictionary = {
         'es': 'Ajustes del adaptador para PJLink Adapter',
         'pl': 'Ustawienia adaptera dla PJLink Adapter',
         'zh-cn': 'PJLink adapter settings'
+    },
+
+    'Input Sources': {
+        'en': 'Input Sources',
+        'de': 'Verfügbare Eingänge',
+        'ru': 'Input Sources',
+        'pt': 'Input Sources',
+        'nl': 'Input Sources',
+        'fr': "Input Sources",
+        'it': "Input Sources",
+        'es': 'Input Sources',
+        'pl': 'Input Sources',
+        'zh-cn': 'Input Sources'
     },
 
     'IP or Host Name': {

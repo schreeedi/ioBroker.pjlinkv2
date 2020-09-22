@@ -1,5 +1,3 @@
-<!-- Admin Interface for PJLinkV2 Adapter -->
-
 <html>
 
 <head>
@@ -66,72 +64,76 @@
 <body>
 
 <div class="m adapter-container">
-
     <div class="row">
         <!-- Tabs navigation -->
         <div class="col s12">
             <ul class="tabs">
                 <li class="tab col s2">
-                    <a href="#tab-options" class="translate" data-lang="Options">Options</a>
+                    <a href="#tab-options" class="translate" data-lang="PJ Link adapter settings">PJ Link adapter settings</a>
                 </li>
                 <li class="tab col s2">
-                    <a href="#tab-input" class="translate" data-lang="Input Sources">Devices</a>
+                    <a href="#tab-input" class="translate" data-lang="Input Sources">Input Sources</a>
                 </li>
             </ul>
         </div>
-
-        <!-- Tabs content -->
-        <div id="tab-options" class="col s12 page">
-            <div class="row">
-                    <img src="pjlink.png" class="logo">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col s12 m4 l2">
-                <div class="input-field col">
-                    <input class="value text" id="iporhost" for="iporhost" size="30" maxlength="30" type="text">
-                    <label class="translate active">IP or Host Name</label>
-                </div>
-                <div class="input-field col">
-                    <input class="value number" id="port" for="port" type="number">
-                    <label class="translate active">TCP Port</label>
-                    <span class="helper-text translate">default_port</span>
-                </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col s12 m4 l2">
-                <div class="input-field col">
-                    <input class="value text" id="password" for="password" size="55" maxlength="55" type="password">
-                    <label class="translate active">Password</label>
-                </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col s12 m4 l2">
-                <div class="input-field col">
-                    <select class="value text" id="protocol" size="30" maxlength="30">
-                        <option value="Class#1" class="translate">PJLink Class 1</option>
-                        <option value="Class#2" class="translate">PJLink Class 2</option>
-                    </select>
-                    <label class="translate active">Device Protocol</label>
-                </div>
-                </div>
-                <div class="input-field col">
-                    <input class="value number" id="polltime" for="polltime" type="number" min="500">
-                    <label class="translate active">Polling Interval</label>
-                    <span class="helper-text translate">interval</span>
-                </div>
-            </div>
-
+    </div>
+    <!-- Logo -->
+    <div class="row">
+        <div class="col s12 m4 l2">
+            <img src="pjlink.png" class="logo">
         </div>
+    </div>
 
+    <!-- Settings -->
+
+    <div class="row">
+        <div class="col s6 input-field">
+            <input type="checkbox" class="value" id="debug_mode" />
+            <label for="debug_mode" class="translate">Debug Mode</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m4 l2">
+            <div class="input-field col">
+                <input class="value text" id="iporhost" for="iporhost" size="30" maxlength="30" type="text">
+                <label class="translate active">IP or Host Name</label>
+            </div>
+            <div class="input-field col">
+                <input class="value number" id="port" for="port" type="number">
+                <label class="translate active">TCP Port</label>
+                <span class="helper-text translate">default_port</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m4 l2">
+            <div class="input-field col">
+                <input class="value text" id="password" for="password" size="55" maxlength="55" type="password">
+                <label class="translate active">Password</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m4 l2">
+            <div class="input-field col">
+                <select class="value text" id="protocol" size="30" maxlength="30">
+                    <option value="Class#1" class="translate">PJLink Class 1</option>
+                    <option value="Class#2" class="translate">PJLink Class 2</option>
+                </select>
+                <label class="translate active">Device Protocol</label>
+            </div>
+
+            <div class="input-field col">
+                <input class="value number" id="polltime" for="polltime" type="number" min="500">
+                <label class="translate active">Polling Interval</label>
+                <span class="helper-text translate">interval</span>
+            </div>
+        </div>
     </div>
 </div>
-
 </body>
 
 </html>
