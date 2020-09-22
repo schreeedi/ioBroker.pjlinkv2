@@ -15,97 +15,98 @@
                 "es": "second major release",
                 "pl": "second major release",
                 "zh-cn": "second major release",
-            "0.0.1": {
-                "en": "initial release",
-                "de": "Erstveröffentlichung",
-                "ru": "Начальная версия",
-                "pt": "lançamento inicial",
-                "nl": "Eerste uitgave",
-                "fr": "Première version",
-                "it": "Versione iniziale",
-                "es": "Versión inicial",
-                "pl": "Pierwsze wydanie",
-                "zh-cn": "首次出版"
-            }
-        },
-        "title": "PJLinkV2 Adapter",
-        "titleLang": {
-            "en": "PJLinkV2 Adapter",
-            "de": "PJLinkV2 Adapter",
-            "ru": "PJLinkV2 Adapter",
-            "pt": "PJLinkV2 Adapter",
-            "nl": "PJLinkV2 Adapter",
-            "fr": "PJLinkV2 Adapter",
-            "it": "PJLinkV2 Adapter",
-            "es": "PJLinkV2 Adapter",
-            "pl": "PJLinkV2 Adapter",
-            "zh-cn": "PJLinkV2 Adapter"
-        },
-        "desc": {
-            "en": "Control any PJLink compatible projector or display",
-            "de": "Steuerung eines Projektors oder Displays der das PJLink Protokoll unterstützt",
-            "ru": "Control any PJLink compatible projector or display",
-            "pt": "Control any PJLink compatible projector or display",
-            "nl": "Control any PJLink compatible projector or display",
-            "fr": "Control any PJLink compatible projector or display",
-            "it": "Control any PJLink compatible projector or display",
-            "es": "Control any PJLink compatible projector or display",
-            "pl": "Control any PJLink compatible projector or display",
-            "zh-cn": "Control any PJLink compatible projector or display"
-        },
-        "authors": [
-            "Author <oberstel@gmail.com>"
-        ],
-        "keywords": [
-            "ioBroker",
-            "Smart Home",
-            "home automation",
-            "projector",
-            "beamer",
-            "display",
-            "pjlink"
-        ],
-        "license": "MIT",
-        "platform": "Javascript/Node.js",
-        "main": "main.js",
-        "icon": "pjlink.png",
-        "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/Author/ioBroker.template/master/admin/template.png",
-        "readme": "https://github.com/Author/ioBroker.template/blob/master/README.md",
-        "loglevel": "info",
-        "mode": "daemon",
-        "type": "general",
-        "compact": true,
-        "materialize": true,
-        "materializeTab": true,
-        "adminTab": {
-            "singleton": true,
-            "name": {
-                "en": "Template (JavaScript)",
-                "de": "Vorlage (JavaScript)",
-                "ru": "Шаблон (JavaScript)",
-                "pt": "Modelo (JavaScript)",
-                "nl": "Sjabloon (JavaScript)",
-                "fr": "Modèle (JavaScript)",
-                "it": "Modello (JavaScript)",
-                "es": "Plantilla (JavaScript)",
-                "pl": "Szablon (JavaScript)",
-                "zh-cn": "范本（JavaScript）"
+                "0.0.1": {
+                    "en": "initial release",
+                    "de": "Erstveröffentlichung",
+                    "ru": "Начальная версия",
+                    "pt": "lançamento inicial",
+                    "nl": "Eerste uitgave",
+                    "fr": "Première version",
+                    "it": "Versione iniziale",
+                    "es": "Versión inicial",
+                    "pl": "Pierwsze wydanie",
+                    "zh-cn": "首次出版"
+                }
             },
-            "link": "",
-            "fa-icon": "info"
+            "title": "PJLinkV2 Adapter",
+            "titleLang": {
+                "en": "PJLinkV2 Adapter",
+                "de": "PJLinkV2 Adapter",
+                "ru": "PJLinkV2 Adapter",
+                "pt": "PJLinkV2 Adapter",
+                "nl": "PJLinkV2 Adapter",
+                "fr": "PJLinkV2 Adapter",
+                "it": "PJLinkV2 Adapter",
+                "es": "PJLinkV2 Adapter",
+                "pl": "PJLinkV2 Adapter",
+                "zh-cn": "PJLinkV2 Adapter"
+            },
+            "desc": {
+                "en": "Control any PJLink compatible projector or display",
+                "de": "Steuerung eines Projektors oder Displays der das PJLink Protokoll unterstützt",
+                "ru": "Control any PJLink compatible projector or display",
+                "pt": "Control any PJLink compatible projector or display",
+                "nl": "Control any PJLink compatible projector or display",
+                "fr": "Control any PJLink compatible projector or display",
+                "it": "Control any PJLink compatible projector or display",
+                "es": "Control any PJLink compatible projector or display",
+                "pl": "Control any PJLink compatible projector or display",
+                "zh-cn": "Control any PJLink compatible projector or display"
+            },
+            "authors": [
+                "Author <oberstel@gmail.com>"
+            ],
+            "keywords": [
+                "ioBroker",
+                "Smart Home",
+                "home automation",
+                "projector",
+                "beamer",
+                "display",
+                "pjlink"
+            ],
+            "license": "MIT",
+            "platform": "Javascript/Node.js",
+            "main": "main.js",
+            "icon": "pjlink.png",
+            "enabled": true,
+            "extIcon": "https://raw.githubusercontent.com/Author/ioBroker.template/master/admin/template.png",
+            "readme": "https://github.com/Author/ioBroker.template/blob/master/README.md",
+            "loglevel": "info",
+            "mode": "daemon",
+            "type": "general",
+            "compact": true,
+            "materialize": true,
+            "materializeTab": true,
+            "adminTab": {
+                "singleton": true,
+                "name": {
+                    "en": "Template (JavaScript)",
+                    "de": "Vorlage (JavaScript)",
+                    "ru": "Шаблон (JavaScript)",
+                    "pt": "Modelo (JavaScript)",
+                    "nl": "Sjabloon (JavaScript)",
+                    "fr": "Modèle (JavaScript)",
+                    "it": "Modello (JavaScript)",
+                    "es": "Plantilla (JavaScript)",
+                    "pl": "Szablon (JavaScript)",
+                    "zh-cn": "范本（JavaScript）"
+                },
+                "link": "",
+                "fa-icon": "info"
+            },
+            "supportCustoms": true,
+            "dependencies": [
+                {
+                    "js-controller": ">=1.4.2"
+                }
+            ]
         },
-        "supportCustoms": true,
-        "dependencies": [
-            {
-                "js-controller": ">=1.4.2"
-            }
-        ]
-    },
-    "native": {
-        "option1": true,
-        "option2": "42"
-    },
-    "objects": [],
-    "instanceObjects": []
+        "native": {
+            "option1": true,
+            "option2": "42"
+        },
+        "objects": [],
+        "instanceObjects": []
+    }
 }
