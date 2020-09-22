@@ -1,9 +1,9 @@
 {
-    "adapterName": "template",
-    "description": "Template for adapter development",
-    "authorName": "Author",
-    "authorGithub": "Author",
-    "authorEmail": "author@mail.com",
+    "adapterName": "PJLinkV2",
+    "description": "Adapter for PJLink compatible devices",
+    "authorName": "oberstel",
+    "authorGithub": "oberstel",
+    "authorEmail": "oberstel@mail.com",
     "gitRemoteProtocol": "HTTPS",
     "ci": [
         "travis"
