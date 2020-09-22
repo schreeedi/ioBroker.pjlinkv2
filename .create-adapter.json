@@ -1,5 +1,5 @@
 {
-    "adapterName": "PJLinkV2",
+    "adapterName": "iobroker.pjlinkv2",
     "description": "Adapter for PJLink compatible devices",
     "authorName": "oberstel",
     "authorGithub": "oberstel",
