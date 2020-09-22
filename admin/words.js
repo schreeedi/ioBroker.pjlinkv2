@@ -96,7 +96,7 @@ systemDictionary = {
 
     'interval': {
         'en': 'msec',
-        'de': 'Milliseknunden (msec)',
+        'de': 'Millisekunden (msec)',
         'ru': 'msec',
         'pt': 'msec',
         'nl': 'msec',
