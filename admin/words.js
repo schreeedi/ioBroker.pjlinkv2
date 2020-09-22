@@ -69,16 +69,16 @@ systemDictionary = {
     },
 
     'Communication Protocol': {
-        'en': 'Communication Protocol',
-        'de': 'Kommunikationsprotokoll',
-        'ru': 'Communication Protocol',
-        'pt': 'Communication Protocol',
-        'nl': 'Communication Protocol',
-        'fr': 'Communication Protocol',
-        'it': 'Communication Protocol',
-        'es': 'Communication Protocol',
-        'pl': 'Communication Protocol',
-        'zh-cn': 'Communication Protocol'
+        'en': 'Device Protocol',
+        'de': 'Geräte Protokoll',
+        'ru': 'Device Protocol',
+        'pt': 'Device Protocol',
+        'nl': 'Device Protocol',
+        'fr': 'Device Protocol',
+        'it': 'Device Protocol',
+        'es': 'Device Protocol',
+        'pl': 'Device Protocol',
+        'zh-cn': 'Device Protocol'
     },
 
     'Polling Interval': {
