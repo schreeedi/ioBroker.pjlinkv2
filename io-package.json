@@ -1,6 +1,6 @@
 {
     "common": {
-        "name": "PJLinkV2",
+        "name": "iobroker.pjlinkv2",
         "version": "2.0.0",
         "news": {
             "0.0.1": {
