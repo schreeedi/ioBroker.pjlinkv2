@@ -41,7 +41,7 @@ systemDictionary = {
         'zh-cn': 'TCP Port'
     },
 
-    'default': {
+    'default_port': {
         'en': 'default: 4352',
         'de': 'Standard: 4352',
         'ru': 'По умолчанию : 4352',
@@ -51,30 +51,58 @@ systemDictionary = {
         'it': 'default: 4352',
         'es': 'default: 4352',
         'pl': 'default: 4352',
-        'zh-cn': 'default: 90435290'
+        'zh-cn': 'default: 4352'
     },
-    'option1': {
-        'en': 'option1',
-        'de': 'Option 1',
-        'ru': 'Опция 1',
-        'pt': 'Opção 1',
-        'nl': 'Optie 1',
-        'fr': 'Option 1',
-        'it': 'opzione 1',
-        'es': 'Opción 1',
-        'pl': 'opcja 1',
-        'zh-cn': 'option1'
+
+    'password': {
+        'en': 'Device Password',
+        'de': 'Geräte Kennwort',
+        'ru': 'Device Password',
+        'pt': 'Device Password',
+        'nl': 'Device Password',
+        'fr': 'Device Password',
+        'it': 'Device Password',
+        'es': 'Device Password',
+        'pl': 'dDevice Password',
+        'zh-cn': 'Device Password'
     },
-    'option2': {
-        'en': 'option2',
-        'de': 'Option 2',
-        'ru': 'option2',
-        'pt': 'opção 2',
-        'nl': 'Optie 2',
-        'fr': 'Option 2',
-        'it': 'opzione 2',
-        'es': 'opcion 2',
-        'pl': 'Opcja 2',
-        'zh-cn': 'option2'
+
+    'protocol': {
+        'en': 'Comunicaiton Protocol',
+        'de': 'Kommunikationsprotokoll',
+        'ru': 'Comunicaiton Protocol',
+        'pt': 'Comunicaiton Protocol',
+        'nl': 'Comunicaiton Protocol',
+        'fr': 'Comunicaiton Protocol',
+        'it': 'Comunicaiton Protocol',
+        'es': 'Comunicaiton Protocol',
+        'pl': 'Comunicaiton Protocol',
+        'zh-cn': 'Comunicaiton Protocol'
+    },
+
+    'polltime': {
+        'en': 'Polling Interval',
+        'de': 'Polling Intervall',
+        'ru': 'Polling Interval',
+        'pt': 'Polling Interval',
+        'nl': 'Polling Interval',
+        'fr': 'Polling Interval',
+        'it': 'Polling Interval',
+        'es': 'Polling Interval',
+        'pl': 'Polling Interval',
+        'zh-cn': 'Polling Interval'
+    },
+
+    'interval': {
+        'en': 'msec',
+        'de': 'Milliseknunden (msec)',
+        'ru': 'msec',
+        'pt': 'msec',
+        'nl': 'msec',
+        'fr': 'msec',
+        'it': 'msec',
+        'es': 'msec',
+        'pl': 'msec',
+        'zh-cn': 'msec'
     }
-};
+  }
