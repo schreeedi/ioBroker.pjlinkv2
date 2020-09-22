@@ -94,10 +94,24 @@
                     <div class="input-field col">
                         <input class="value number" id="port" for="port" type="number">
                         <label class="translate active">TCP Port</label>
+                        <span class="helper-text translate">default</span>
+
                     </div>
                     <div class="input-field col">
-                        <input class="value number" id="pollingInterval" for="pollingInterval" type="number">
-                        <label class="translate active">Polling interval (msec)</label>
+                        <input class="value text" id="password" for="password" size="55" maxlength="55" type="password">
+                        <label class="translate active">Password</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col">
+                        <input class="value text" id="protocol" for="protocol" type="text">
+                        <option value="class1">PJLink Class#1</option>
+                        <label class="translate active">Protocol</label>
+                    </div>
+                    <div class="input-field col">
+                        <input class="value number" id="polltime" for="polltime" type="number">
+                        <label class="translate active">Polling Interval (msec)</label>
                     </div>
                 </div>
 

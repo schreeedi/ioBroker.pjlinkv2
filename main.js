@@ -8,6 +8,9 @@
 // you need to create an adapter
 const utils = require('@iobroker/adapter-core');
 
+var iporhost, port, password, polltime, pjlink;
+var power, inputSource, av_mute;
+
 // Load your modules here, e.g.:
 // const fs = require("fs");
 

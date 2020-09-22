@@ -1,22 +1,22 @@
 {
-  "name": "iobroker.template",
-  "version": "0.0.1",
-  "description": "Template for adapter development",
+  "name": "iobroker.pjlinkv2",
+  "version": "2.0.0",
+  "description": "ioBroker PJLink Adapter, based on PJLink Specification V1.04",
   "author": {
-    "name": "Author",
-    "email": "author@mail.com"
+    "name": "oberstel",
+    "email": "oberstel@gmail.com"
   },
-  "homepage": "https://github.com/Author/ioBroker.template",
+  "homepage": "https://github.com/oberstel/ioBroker.PJLinkV2",
   "license": "MIT",
   "keywords": [
     "ioBroker",
-    "template",
-    "Smart Home",
-    "home automation"
+    "PJLink",
+    "Projector",
+    "Beamer"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Author/ioBroker.template"
+    "url": "https://github.com/oberstel/ioBroker.PJLinkV2.git"
   },
   "dependencies": {
     "@iobroker/adapter-core": "^2.4.0"
@@ -51,7 +51,7 @@
     "lint": "eslint"
   },
   "bugs": {
-    "url": "https://github.com/Author/ioBroker.template/issues"
+    "url": "https://github.com/oberstel/ioBroker.PJLinkV2/issues"
   },
   "readmeFilename": "README.md"
 }
