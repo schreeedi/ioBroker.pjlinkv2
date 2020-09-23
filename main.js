@@ -1,29 +1,32 @@
 'use strict';
 
 /*
- * Created with @iobroker/create-adapter v1.28.0
+ * PJLink Adapter V2
  */
 
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 const utils = require('@iobroker/adapter-core');
 
-var iporhost, port, password, polltime, pjlink;
-var power, inputSource, av_mute;
+var iporhost, port, password, polltime, protocol;
+var power_onoff, powerState, inputSource, av_mute;
 
 // Load your modules here, e.g.:
 // const fs = require("fs");
 
-class Template extends utils.Adapter {
+const pjlink = require("pjlink");
+
+class pjlinkv2 extends utils.Adapter {
 
     /**
      * @param {Partial<utils.AdapterOptions>} [options={}]
      */
     constructor(options) {
-        super({
-            ...options,
-            name: 'template',
-        });
+        super(Object.assign(options || {}, {
+            name: 'pjlinkv2',
+            systemConfig: true,
+        }));
+
         this.on('ready', this.onReady.bind(this));
         this.on('stateChange', this.onStateChange.bind(this));
         // this.on('objectChange', this.onObjectChange.bind(this));
@@ -36,21 +39,34 @@ class Template extends utils.Adapter {
      */
     async onReady() {
         // Initialize your adapter here
-
+        this.log.info(`Starting PJLink V2...`);
         // The adapters config (in the instance object everything under the attribute "native") is accessible via
         // this.config:
-        this.log.info('config option1: ' + this.config.option1);
-        this.log.info('config option2: ' + this.config.option2);
+
+        // this.log.info('config option1: ' + this.config.option1);
+        // this.log.info('config option2: ' + this.config.option2);
 
         /*
         For every state in the system there has to be also an object of type state
         Here a simple template for a boolean variable named "testVariable"
         Because every adapter instance uses its own unique namespace variable names can't collide with other adapters variables
         */
-        await this.setObjectNotExistsAsync('testVariable', {
+        await this.setObjectNotExistsAsync('power_state', {
             type: 'state',
             common: {
-                name: 'testVariable',
+                name: 'Power State',
+                type: 'boolean',
+                role: 'indicator',
+                read: true,
+                write: false,
+            },
+            native: {},
+        });
+
+        await this.setObjectNotExistsAsync('power', {
+            type: 'state',
+            common: {
+                name: 'Turn Power on/off',
                 type: 'boolean',
                 role: 'indicator',
                 read: true,
@@ -59,8 +75,24 @@ class Template extends utils.Adapter {
             native: {},
         });
 
+        await this.setObjectNotExistsAsync('info.name', {
+            type: 'state',
+            common: {
+                name: 'Projector Name',
+                type: 'string',
+                role: 'indicator',
+                read: true,
+                write: false,
+            },
+            native: {},
+        });
+
+
         // In order to get state updates, you need to subscribe to them. The following line adds a subscription for our variable we have created above.
-        this.subscribeStates('testVariable');
+        this.subscribeStates('power_state');
+        this.subscribeStates('power');
+        this.subscribeStates('info.name');
+
         // You can also add a subscription for multiple states. The following line watches all states starting with "lights."
         // this.subscribeStates('lights.*');
         // Or, if you really must, you can also watch all states. Don't do this if you don't need to. Otherwise this will cause a lot of unnecessary load on the system:
@@ -128,7 +160,17 @@ class Template extends utils.Adapter {
      * @param {string} id
      * @param {ioBroker.State | null | undefined} state
      */
-    onStateChange(id, state) {
+    /* onStateChange(id, state) {
+        if (state) {
+            // The state was changed
+            this.log.info(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
+        } else {
+            // The state was deleted
+            this.log.info(`state ${id} deleted`);
+        }
+    }*/
+
+    onStateChange(id:'Power', state) {
         if (state) {
             // The state was changed
             this.log.info(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
@@ -137,6 +179,7 @@ class Template extends utils.Adapter {
             this.log.info(`state ${id} deleted`);
         }
     }
+
 
     // If you need to accept messages in your adapter, uncomment the following block and the corresponding line in the constructor.
     // /**
@@ -164,8 +207,12 @@ if (module.parent) {
     /**
      * @param {Partial<utils.AdapterOptions>} [options={}]
      */
+
+ /*
     module.exports = (options) => new Template(options);
 } else {
     // otherwise start the instance directly
     new Template();
+*/
 }
+
