@@ -10,7 +10,7 @@ const utils = require('@iobroker/adapter-core');
 
 var iporhost, port, password, polltime, protocol;
 
-iporhost = '192.168.1.13';
+iporhost = '192.168.1.139';
 port = '4352';
 password = '';
 polltime = 5000;
@@ -266,8 +266,8 @@ class pjlinkv2 extends utils.Adapter {
                                 } else {                     // if there are 2 lamps....
                                     this.setStateAsync('info.lightingHours#2', {val: getLamps[2], ack: true});
                                     this.log.silly('set lightingHours for Lamp#2 ' + getLamps[2]);
-                                    this.setStateAsync('info.lampOn#2', {val: getLamps[3], ack: true});
-                                    this.log.silly('set lampOn for Lamp#2 ' + getLamps[3]);
+                                    this.setStateAsync('info.lampOn#2', {val: getLamps[3] ? true : false, ack: true});
+                                    this.log.silly('set lampOn for Lamp#2 ' + (getLamps[3] ? true : false));
                                 }
                             });
                         });
@@ -293,6 +293,9 @@ class pjlinkv2 extends utils.Adapter {
             // get power state
             pjlink(iporhost, port, password, "%1POWR ?", (result) => {
                 this.log.silly('By interval: check connectivity and power state = ' + result);
+                if (result == 'ERR3') {this.log.error('Power toggle result in Unavailable time (ERR3)'); }
+                if (result == 'ERR4') {this.log.error('Power toggle result in Projector/Display failure (ERR4)'); }
+
                 if (result >= 0 && result <= 3) {
                     this.setStateAsync('info.connection', {val: true, ack: true});
                     this.setStateAsync('info.isPower', {val: result, ack: true});
@@ -419,7 +422,6 @@ class pjlinkv2 extends utils.Adapter {
                                     this.setStateAsync('info.audioMute', {val: false, ack: true});
                                     av_mute = 10;
                             }
-
                         });
                     });
                 });
