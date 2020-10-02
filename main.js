@@ -299,7 +299,7 @@ class pjlinkv2 extends utils.Adapter {
                 } else {
                     this.setStateAsync('info.connection', {val: false, ack: true});
                 }
-                if (result === 1) {powerState = 'on';} else {powerState = 'off';}
+                if (result == 1) {powerState = 'on';} else {powerState = 'off';}
                 this.log.silly('By interval: PowerState = ' + powerState);
 
                 // get error Status
@@ -488,11 +488,12 @@ class pjlinkv2 extends utils.Adapter {
                         if (power === '0') {
                             pjlink(iporhost, port, password, `%1POWR 1`, (result) => {
                                 this.log.silly('OnChange: Send POWR 1 to device = ' + result);
+                                if (result != 'OK') {this.log.error('Power On result: ' + result); }
                             });
                         }
                         if (power === '1') {
                             pjlink(iporhost, port, password, `%1POWR 0`, (result) => {
-                                this.log.silly('OnChange: Send POWR 1 to device = ' + result);
+                                this.log.silly('OnChange: Send POWR 0 to device = ' + result);
                             });
                         }
                     });
@@ -503,7 +504,8 @@ class pjlinkv2 extends utils.Adapter {
             if(id.includes(".inputSource")) {
                 if (powerState === 'on') {
                     pjlink(iporhost, port, password, '%1INPT ' + state.val, (result) => {
-                        this.log.silly("OnChange: input source = " + result);
+                        this.log.silly("OnChange: input source = " + state.val + ' result: ' + result);
+                        if (result != 'OK') {this.log.error(`Selected inputSource ${state.val} result: ${result}`); }
                     });
                 }
             }
@@ -538,20 +540,22 @@ class pjlinkv2 extends utils.Adapter {
                             pjlink(iporhost, port, password, '%1AVMT 21', (result) => {
                                 av_mute = 20;
                                 this.log.silly('OnChange: set AVMT to 21 = ' + result);
+                                if (result != 'OK') {this.log.error('muteAudio result: ' + result); }
                             });
                             break;
-                        case 21:
+                        case 21: // audioMute on
                             this.setStateAsync('info.audioMute', {val: false, ack: true});
                             pjlink(iporhost, port, password, '%1AVMT 20', (result) => {
                                 av_mute = 20;
                                 this.log.silly('OnChange: set AVMT to 20 = ' + result);
                             });
                             break;
-                        case 20:
+                        case 20: // audioMute off
                             this.setStateAsync('info.audioMute', {val: true, ack: true});
                             pjlink(iporhost, port, password, '%1AVMT 21', (result) => {
                                 av_mute = 21;
                                 this.log.silly('OnChange: set AVMT to 21 = ' + result);
+                                if (result != 'OK') {this.log.error('muteAudio result: ' + result); }
                             });
                     }
                 }
@@ -560,7 +564,7 @@ class pjlinkv2 extends utils.Adapter {
             // mute_Video changed
             if(id.includes(".muteVideo")) {
                 if (state.val) {
-                    this.log.silly('OnChange: Current AVMT state = ' + av_mute);
+                    this.log.silly('OnChange: Current AVMT state = ' + av_mute + ' set to = ' + state.val);
                     switch (av_mute) {
                         case 31: // videoMute on, audioMute on
                             this.setStateAsync('info.videoMute', {val: false, ack: true});
@@ -574,20 +578,22 @@ class pjlinkv2 extends utils.Adapter {
                             pjlink(iporhost, port, password, '%1AVMT 11', (result) => {
                                 av_mute = 10;
                                 this.log.silly('OnChange: set AVMT to 11 = ' + result);
+                                if (result != 'OK') {this.log.error('muteVideo result: ' + result); }
                             });
                             break;
-                        case 11:
+                        case 11: // videoMute on
                             this.setStateAsync('info.videoMute', {val: false, ack: true});
                             pjlink(iporhost, port, password, '%1AVMT 10', (result) => {
                                 av_mute = 10;
                                 this.log.silly('OnChange: set AVMT to 10 = ' + result);
                             });
                             break;
-                        case 10:
+                        case 10: // videoMute off
                             this.setStateAsync('info.videoMute', {val: true, ack: true});
                             pjlink(iporhost, port, password, '%1AVMT 11', (result) => {
                                 av_mute = 11;
                                 this.log.silly('OnChange: set AVMT to 11 = ' + result);
+                                if (result != 'OK') {this.log.error('muteVideo result: ' + result); }
                             });
                     }
                 }
