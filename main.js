@@ -179,18 +179,18 @@ class pjlinkv2 extends utils.Adapter {
             native: {},
         });
 
-//       await this.setObjectNotExistsAsync('info.audioMute', {
-//            type: 'state',
-//            common: {name: 'Current audio mute state', type: 'boolean', role: 'state', read: true, write: false},
-//            native: {},
-//        });
-//        this.log.debug('Create Object .info.audioMute');
-//        await this.setObjectNotExistsAsync('info.videoMute', {
-//            type: 'state',
-//            common: {name: 'Current video mute state', type: 'boolean', role: 'state', read: true, write: false},
-//            native: {},
-//        });
-//        this.log.debug('Create Object .info.videoMute');
+       await this.setObjectNotExistsAsync('info.audioMute', {
+            type: 'state',
+            common: {name: 'Current audio mute state', type: 'boolean', role: 'state', read: true, write: false},
+            native: {},
+        });
+        this.log.debug('Create Object .info.audioMute');
+        await this.setObjectNotExistsAsync('info.videoMute', {
+            type: 'state',
+            common: {name: 'Current video mute state', type: 'boolean', role: 'state', read: true, write: false},
+            native: {},
+        });
+        this.log.debug('Create Object .info.videoMute');
 
         // just because some projectors have two lamps...
         this.log.debug('Create Object .info.lightingHours#1');
@@ -329,7 +329,7 @@ class pjlinkv2 extends utils.Adapter {
                     pjlink(iporhost, port, password, "%1INPT ?", (result) => {
                         this.log.debug('By interval: fetching info.isInput = ' + result);
                         // this is not perfect - but it works!!!
-                        this.setStateAsync('info.isInput', {val: result, ack: true});
+                        this.setStateAsync('info.isInput', {val: parseInt(result,10), ack: true});
                         this.setStateAsync('info.isInputName', {val: translateInputName(result), ack: true});
                         this.setStateAsync('inputSource', {val: parseInt(result,10), ack: false});
                 
