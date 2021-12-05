@@ -44,7 +44,7 @@ class pjlinkv2 extends utils.Adapter {
         // this.config:
 
 // Device Properties (defined by admin interface)
-    if (config.myiporhost) { 
+    if (this.config.myiporhost) { 
         iporhost = this.config.myiporhost;
         port = this.config.myport;
         polltime = this.config.mypolltime;
