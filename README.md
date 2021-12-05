@@ -16,11 +16,11 @@ This adapter controls any PJLink compatible projector or display with ioBroker.
 
 PJLink is a unified standard for operating and controlling data projectors and displays. The protocol enables central control of certain devices, manufactured by different vendors. The protocol is used by NEC, Casio, Seiko, Sony, Panasonic, Hitachi, Mitsubishi, Ricoh, Vivitek and even more. Please consult the device manual to check compatibility.
 
+Note: Devices are not sending information activly... therefore, the adapter will pull certain information frequently (see polling interval). Do not reduce the polling interval <10 sec. because the device needs up to 2 sec. to answer and the script will query several paramters!
+
 ## Current shortcomings
-- Error Handling is not implemented right now. If an unknown parameter is entered or if the device is not accessible using TCP/IP, an error will be shown in the ioBroker Log. In one of the future versions, the device errorcodes will be analyzed and translated.
-- Lighting hours are given for one (the first) lamp, even if PJLink supports several lamps. If somebody have a proper device, please contact me for testing.
-- The device is not pushing information using the PJLink protocol. Therefore, the adapter will pull certain information frequently (see
-polling interval). Do not reduce the polling interval <10 sec. because the device needs up to 2 sec. to answer and the script will query several paramters.
+- Audio / Video mute can not be set. Setting these modes is not working correctly right now. It's disabled in the code - can somebody contribute on this?
+- Warum-Up and Cool-Down ist not tested because my device is to giving these information - can somebody contribute on this? 
 - All dialogs are in English as for now, DE and RU are in progress. Further translations on demand.
 
 ## ToDo
@@ -41,6 +41,11 @@ The Main script works in four steps:
 Please be aware, that the communication with the projector is not possible if the projector is in standby with power saving feature enabled. Therefore, it will not be possible to turn the project on using this adapter. To do so, disable the power saving feature using the projector configuration (Menu > Settings...).
 
 ## Changelog
+### 2.1.0 (2021/12/05)
+- enhanced errorhandling when device is not connected
+- fixed power-off handling
+- implemented isInputSourceName for better source identification and reporting in vis 
+
 ### 2.0.0 (2020/09/22)
 - new development, based on ioBroker adapter template 
 
