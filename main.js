@@ -44,12 +44,16 @@ class pjlinkv2 extends utils.Adapter {
         // this.config:
 
 // Device Properties (defined by admin interface)
-    iporhost = this.config.myiporhost;
-    port = this.config.myport;
-    polltime = this.config.mypolltime;
-    password = this.config.mysecret;
-    protocol = this.config.myprotocol;
-    this.log.info('Trying to connect to:' + iporhost + ' on port:' + port);
+    if (config.myiporhost) { 
+        iporhost = this.config.myiporhost;
+        port = this.config.myport;
+        polltime = this.config.mypolltime;
+        password = this.config.mysecret;
+        protocol = this.config.myprotocol;
+        this.log.info('Trying to connect to:' + iporhost + ' on port:' + port);
+    } else {
+        return;
+    }
         
 // Start creating objects....
         // Create Control Objects
