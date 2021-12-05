@@ -1,26 +1,40 @@
 {
-  "name": "iobroker.pjlinkv2",
-  "version": "2.0.4",
-  "description": "ioBroker PJLink adapter, supporting PJLink specification Cass 1 and Class 2",
+  "_from": "git+https://github.com/oberstel/ioBroker.PJLinkV2.git",
+  "_id": "iobroker.pjlinkv2@2.1.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/iobroker.pjlinkv2",
+  "_phantomChildren": {
+    "@types/node": "13.5.2"
+  },
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/oberstel/ioBroker.PJLinkV2.git",
+    "rawSpec": "https://github.com/oberstel/ioBroker.PJLinkV2.git",
+    "saveSpec": "git+https://github.com/oberstel/ioBroker.PJLinkV2.git",
+    "fetchSpec": "https://github.com/oberstel/ioBroker.PJLinkV2.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/oberstel/ioBroker.PJLinkV2.git#eeaf41e5f122c55babb821b351d468d3dbac199a",
+  "_spec": "https://github.com/oberstel/ioBroker.PJLinkV2.git",
+  "_where": "/opt/iobroker",
   "author": {
     "name": "oberstel",
     "email": "oberstel@gmail.com"
   },
-  "homepage": "https://github.com/oberstel/ioBroker.PJLinkV2",
-  "license": "MIT",
-  "keywords": [
-    "ioBroker",
-    "PJLink",
-    "Projector",
-    "Beamer"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/oberstel/ioBroker.PJLinkV2.git"
+  "bugs": {
+    "url": "https://github.com/oberstel/ioBroker.PJLinkV2/issues"
   },
+  "bundleDependencies": false,
   "dependencies": {
     "@iobroker/adapter-core": "^2.4.0"
   },
+  "deprecated": false,
+  "description": "ioBroker PJLink adapter, supporting PJLink specification Cass 1 and Class 2",
   "devDependencies": {
     "@iobroker/testing": "^2.3.0",
     "@types/chai": "^4.2.12",
@@ -41,17 +55,27 @@
     "sinon": "^9.0.3",
     "sinon-chai": "^3.5.0"
   },
+  "homepage": "https://github.com/oberstel/ioBroker.PJLinkV2",
+  "keywords": [
+    "ioBroker",
+    "PJLink",
+    "Projector",
+    "Beamer"
+  ],
+  "license": "MIT",
   "main": "main.js",
+  "name": "iobroker.pjlinkv2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oberstel/ioBroker.PJLinkV2.git"
+  },
   "scripts": {
+    "lint": "eslint",
+    "test": "npm run test:js && npm run test:package",
+    "test:integration": "mocha test/integration --exit",
     "test:js": "mocha --config ../../Downloads/ioBroker.template-master/JavaScript/test/mocharc.custom.json \\\"{!(node_modules|test)/**/*.test.js,*.test.js,test/**/test!(PackageFiles|Startup).js}\\\"",
     "test:package": "mocha test/package --exit",
-    "test:unit": "mocha test/unit --exit",
-    "test:integration": "mocha test/integration --exit",
-    "test": "npm run test:js && npm run test:package",
-    "lint": "eslint"
+    "test:unit": "mocha test/unit --exit"
   },
-  "bugs": {
-    "url": "https://github.com/oberstel/ioBroker.PJLinkV2/issues"
-  },
-  "readmeFilename": "README.md"
+  "version": "2.1.0"
 }

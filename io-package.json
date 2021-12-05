@@ -2,19 +2,26 @@
     "common": {
         "name": "pjlinkv2",
         "Title": "PJLinkV2",
-        "version": "2.0.4",
+        "version": "2.1.0",
         "news": {
+            "2.1.0": {
+                "en": "pushing to 2.1.0"   
+            },
+            
+            "2.0.6": {
+                "en": "fixed power off handling; implemented InputSourceName; some minor code changes"   
+            },
+            "2.0.5": {
+                "en": "increased adapter stability, due to better errorhandling if device is not reachable"
+            },
+            "2.0.2": {
+                "en": "Audio / Video Mute completele removed (because of to much issues with my device)"
+            },
+            "2.0.1": {
+                "en": "fixed some power on / power off issues"
+            },
             "2.0.0": {
-                "en": "second major release",
-                "de": "Zweites Major Release",
-                "ru": "second major release",
-                "pt": "second major release",
-                "nl": "second major release",
-                "fr": "second major release",
-                "it": "second major release",
-                "es": "second major release",
-                "pl": "second major release",
-                "zh-cn": "second major release"
+                "en": "second major release"
             },
             "0.0.1": {
                 "en": "initial release",
@@ -43,8 +50,8 @@
             "zh-cn": "PJLinkV2 Adapter"
         },
         "desc": {
-            "en": "Control any PJLink compatible projector or display",
-            "de": "Steuerung eines Projektors oder Displays der das PJLink Protokoll unterstützt",
+            "en": "Control any PJLink Class+1 compatible projector or display",
+            "de": "Steuerung eines Projektors oder Displays der das PJLink Protokoll Class #1 unterstützt",
             "ru": "Control any PJLink compatible projector or display",
             "pt": "Control any PJLink compatible projector or display",
             "nl": "Control any PJLink compatible projector or display",
@@ -79,23 +86,8 @@
         "compact": true,
         "materialize": true,
         "materializeTab": true,
-        "adminTab": {
-            "singleton": true,
-            "name": {
-                "en": "Template (JavaScript)",
-                "de": "Vorlage (JavaScript)",
-                "ru": "Шаблон (JavaScript)",
-                "pt": "Modelo (JavaScript)",
-                "nl": "Sjabloon (JavaScript)",
-                "fr": "Modèle (JavaScript)",
-                "it": "Modello (JavaScript)",
-                "es": "Plantilla (JavaScript)",
-                "pl": "Szablon (JavaScript)",
-                "zh-cn": "范本（JavaScript）"
-            },
-            "link": "",
-            "fa-icon": "pjlink.png"
-        },
+        "link": "",
+        "fa-icon": "pjlink.png",
         "supportCustoms": true,
         "dependencies": [
             {
@@ -103,11 +95,12 @@
             }
         ]
     },
-    "native": {
-           "option1": true,
-           "option2": "42"
-    },
-        "objects": [],
-        "instanceObjects": []
+  "native": {
+        "iporhost": "192.168.1.13",
+        "port": "3461",
+        "password": "" 
+       },
+  "objects": [],
+  "instanceObjects": []
 }
 

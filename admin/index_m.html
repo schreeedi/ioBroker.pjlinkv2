@@ -1,51 +1,91 @@
 <html>
-
 <head>
-
-    <!-- Load ioBroker scripts and styles-->
-    <link rel="stylesheet" type="text/css" href="../../css/adapter.css" />
+    <meta charset="UTF-8">
+    <!-- Materialze style -->
+    <link rel="stylesheet" type="text/css" href="../../css/adapter.css"/>
     <link rel="stylesheet" type="text/css" href="../../lib/css/materialize.css">
+    <link type="text/css" rel="stylesheet" href="../../lib/css/themes/jquery-ui/default/jquery-ui.min.css">
+    <link type="text/css" rel="stylesheet" href="../../lib/css/fancytree/ui.fancytree.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../lib/css/iob/selectID.css"/>
 
     <script type="text/javascript" src="../../lib/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../lib/js/jquery-ui-1.10.3.full.min.js"></script>
+    <script type="text/javascript" src="../../lib/js/jquery.fancytree-all.min.js"></script>
     <script type="text/javascript" src="../../socket.io/socket.io.js"></script>
 
     <script type="text/javascript" src="../../js/translate.js"></script>
+    <script type="text/javascript" src="../../lib/js/selectID.js"></script>
     <script type="text/javascript" src="../../lib/js/materialize.js"></script>
     <script type="text/javascript" src="../../js/adapter-settings.js"></script>
-
-    <!-- Load our own files -->
-    <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="text/javascript" src="words.js"></script>
 
     <script type="text/javascript">
-        // This will be called by the admin adapter when the settings page loads
-        function load(settings, onChange) {
-            // example: select elements with id=key and class=value and insert value
-            if (!settings) return;
-            $('.value').each(function () {
-                var $key = $(this);
-                var id = $key.attr('id');
-                if ($key.attr('type') === 'checkbox') {
-                    // do not call onChange direct, because onChange could expect some arguments
-                    $key.prop('checked', settings[id])
-                        .on('change', () => onChange())
-                    ;
-                } else {
-                    // do not call onChange direct, because onChange could expect some arguments
-                    $key.val(settings[id])
-                        .on('change', () => onChange())
-                        .on('keyup', () => onChange())
-                    ;
-                }
-            });
-            onChange(false);
-            // reinitialize all the Materialize labels on the page if you are dynamically adding inputs:
-            if (M) M.updateTextFields();
+        var devices = [];
+        function ip2number(addr) {
+            var parts = addr.split('.').map(function(str) {return parseInt(str);});
+
+            return (parts[0] ? parts[0] << 24 : 0) + (parts[1] ? parts[1] << 16 : 0) + (parts[2] ? parts[2] << 8  : 0) + parts[3];
         }
 
-        // This will be called by the admin adapter when the user presses the save button
+        function compareIpOrName(name1, name2) {
+            if (name1.match(/^\d+\.\d+\.\d+\.\d+$/) && name2.match(/^\d+\.\d+\.\d+\.\d+$/)) {
+                name1 = ip2number(name1);
+                name2 = ip2number(name2);
+            }
+
+            if (name1 < name2) {
+                return -1;
+            } else
+            if (name1 > name2) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }
+
+        // the function loadSettings has to exist ...
+        function load(settings, onChange) {
+            if (!settings) {
+                return;
+            }
+
+            
+            sources = settings.source || [];
+
+            // js: Sort by IP
+            sources.sort(function (dev1, dev2) {
+                return compareIpOrName(dev1.id, dev2.id)
+            });
+
+            for (var i = 0; i < devices.length; i++) {
+                if (sources[i].enabled === undefined) {
+                    sources[i].enabled = true;
+                }
+            }
+
+            for (var key in settings) {
+                if (!settings.hasOwnProperty(key)) {
+                    continue;
+                }
+                var $value = $('#' + key + '.value');
+                if ($value.attr('type') === 'checkbox') {
+                    $value.prop('checked', settings[key]).on('change', function() {
+                        onChange();
+                    });
+                } else {
+                    $value.val(settings[key]).on('change', function() {
+                        onChange();
+                    }).keyup(function() {
+                        onChange();
+                    });
+                }
+            }
+
+            onChange(true);
+            //values2table('sources', device, onChange);
+        }
+
         function save(callback) {
-            // example: select elements with class=value and build settings object
             var obj = {};
             $('.value').each(function () {
                 var $this = $(this);
@@ -55,85 +95,83 @@
                     obj[$this.attr('id')] = $this.val();
                 }
             });
+            // Get edited table
+            obj.sources = table2values('sources');
+
             callback(obj);
         }
     </script>
-
+    <style>
+        .m .select-wrapper+label {
+            top: 100%;
+        }
+    </style>
 </head>
-
 <body>
-
 <div class="m adapter-container">
+
     <div class="row">
-        <!-- Tabs navigation -->
         <div class="col s12">
             <ul class="tabs">
-                <li class="tab col s2">
-                    <a href="#tab-options" class="translate" data-lang="PJ Link adapter settings">PJ Link adapter settings</a>
-                </li>
-                <li class="tab col s2">
-                    <a href="#tab-input" class="translate" data-lang="Input Sources">Input Sources</a>
-                </li>
+                <li class="tab col s2"><a href="#tab-device"  class="translate active">Device settings</a></li>
+        <!--        <li class="tab col s2"><a href="#tab-sources" class="translate">Input sources</a></li>   -->
             </ul>
         </div>
-    </div>
-    <!-- Logo -->
-    <div class="row">
-        <div class="col s12 m4 l2">
-            <img src="pjlink.png" class="logo">
-        </div>
-    </div>
 
-    <!-- Settings -->
-
-    <div class="row">
-        <div class="col s6 input-field">
-            <input type="checkbox" class="value" id="debug_mode" />
-            <label for="debug_mode" class="translate">Debug Mode</label>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col s12 m4 l2">
-            <div class="input-field col">
-                <input class="value text" id="iporhost" for="iporhost" size="30" maxlength="30" type="text">
-                <label class="translate active">IP or Host Name</label>
-            </div>
-            <div class="input-field col">
-                <input class="value number" id="port" for="port" type="number">
-                <label class="translate active">TCP Port</label>
-                <span class="helper-text translate">default_port</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col s12 m4 l2">
-            <div class="input-field col">
-                <input class="value text" id="password" for="password" size="55" maxlength="55" type="password">
-                <label class="translate active">Password</label>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col s12 m4 l2">
-            <div class="input-field col">
-                <select class="value text" id="protocol" size="30" maxlength="30">
-                    <option value="Class#1" class="translate">PJLink Class 1</option>
-                    <option value="Class#2" class="translate">PJLink Class 2</option>
-                </select>
-                <label class="translate active">Device Protocol</label>
+        <div id="tab-device" class="col s12 page">
+            <br><br><br>
+            <div class="row">
+                <div class="col s12 m4">
+                    <label class="translate" for="iporhost">IP address or host name</label>
+                    <input class="value" id="myiporhost" type="text" value="192.168.1.13"/>
+                </div>
+                <div class="col s12 m4">
+                    <label class="translate" for="port">TCP Port (e.g. 4352)</label>
+                    <input class="value" id="myport" type="number" value="4352" min="0" max="65535"/>
+                    <span class="helper-text translate">port_help</span>
+                </div>
             </div>
 
-            <div class="input-field col">
-                <input class="value number" id="polltime" for="polltime" type="number" min="500">
-                <label class="translate active">Polling Interval</label>
-                <span class="helper-text translate">interval</span>
+            <div class="row">
+                <div class="col s12 m4">
+                    <label class="translate" for="protocol">Communication protocol</label>
+                    <select class="value" id="myprotocol" type="number">
+                        <option value="1" class="translate">PJLink Class1</option>
+                        <option value="2" class="translate">PJLink Class2</option>
+                    </select>
+                </div>
+                <div class="col s12 m4">
+                    <label class="translate" for="secret">Device password</label>
+                    <input class="value" id="mysecret" type="text"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m4">
+                    <label class="translate" for="port">Poll interval</label>
+                    <input class="value" id="mypolltime" type="number" value="5000" min="1000" max="500000"/>
+                    <span class="helper-text translate">poll_help</span>
+                </div>
             </div>
         </div>
+ <!--       <div id="tab-sources"    class="col s12 page">
+            <div class="col s12" id="sources">
+                <a class="btn-floating waves-effect waves-light blue table-button-add"><i class="material-icons">add</i></a>
+                <div class="table-values-div">
+                    <table class="table-values">
+                        <thead>
+                        <tr>
+                            <th data-name="Name of input source"     class="translate">Name</th>
+                            <th data-name="ID"       class="translate" style="width: 120px; white-space: nowrap" >ID</th>
+                            <th data-name="extended_info" data-type="checkbox" style="width: 80px; white-space: nowrap" class="translate">Extended Info</th>
+                            <th data-buttons="delete up down" style="width: 120px"></th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div> -->
     </div>
 </div>
 </body>
-
 </html>

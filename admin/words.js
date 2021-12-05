@@ -3,7 +3,7 @@
 'use strict';
 
 systemDictionary = {
-    'PJ Link adapter settings': {
+    'PJLink adapter settings': {
         'en': 'Settings for PJLink Adapter',
         'de': 'Einstellungen des PJLink Adapters',
         'ru': 'Настройки адаптера для PJLink Adapter',
@@ -16,7 +16,19 @@ systemDictionary = {
         'zh-cn': 'PJLink adapter settings'
     },
 
-    'Input Sources': {
+    'Device settings': {
+        'en': 'Device settings',
+        'de': 'Einstellungen',
+        'ru': 'Device settings',
+        'pt': 'Device settings',
+        'nl': 'Device settings',
+        'fr': "Device settings",
+        'it': "Device settings",
+        'es': 'Device settings',
+        'pl': 'Device settings',
+        'zh-cn': 'Device settings'
+    },
+    'Input sources': {
         'en': 'Input Sources',
         'de': 'Verfügbare Eingänge',
         'ru': 'Input Sources',
@@ -29,10 +41,10 @@ systemDictionary = {
         'zh-cn': 'Input Sources'
     },
 
-    'IP or Host Name': {
-        'en': 'IP or Host Name',
-        'de': 'IP Adresse oder Host Name',
-        'ru': 'IP or Host Name',
+    'IP address or host name': {
+        'en': 'IP address or host name',
+        'de': 'IP Adresse oder Hostname',
+        'ru': 'IP-адрес или имя хоста',
         'pt': 'IP or Host Name',
         'nl': 'IP or Host Name',
         'fr': "IP or Host Name",
@@ -42,10 +54,10 @@ systemDictionary = {
         'zh-cn': 'IP or Host Name'
     },
 
-    'TCP Port': {
-        'en': 'TCP Port',
+    'port': {
+        'en': 'TCP port',
         'de': 'TCP Port',
-        'ru': 'TCP Port',
+        'ru': 'TCP порт',
         'pt': 'TCP Port',
         'nl': 'TCP Port',
         'fr': "TCP Port",
@@ -55,7 +67,7 @@ systemDictionary = {
         'zh-cn': 'TCP Port'
     },
 
-    'default_port': {
+    'port_help': {
         'en': 'default: 4352',
         'de': 'Standard: 4352',
         'ru': 'По умолчанию : 4352',
@@ -68,7 +80,7 @@ systemDictionary = {
         'zh-cn': 'default: 4352'
     },
 
-    'Password': {
+    'Device password': {
         'en': 'Device Password',
         'de': 'Geräte Kennwort',
         'ru': 'Device Password',
@@ -81,9 +93,9 @@ systemDictionary = {
         'zh-cn': 'Device Password'
     },
 
-    'Device Protocol': {
-        'en': 'Device Protocol',
-        'de': 'Geräte Protokoll',
+    'Communication protocol<': {
+        'en': 'Communication protocol',
+        'de': 'Kommunikationsprotokoll',
         'ru': 'Device Protocol',
         'pt': 'Device Protocol',
         'nl': 'Device Protocol',
@@ -94,9 +106,9 @@ systemDictionary = {
         'zh-cn': 'Device Protocol'
     },
 
-    'Polling Interval': {
-        'en': 'Polling Interval',
-        'de': 'Polling Intervall',
+    'Poll interval': {
+        'en': 'Polling interval',
+        'de': 'Poll Intervall',
         'ru': 'Polling Interval',
         'pt': 'Polling Interval',
         'nl': 'Polling Interval',
@@ -107,16 +119,16 @@ systemDictionary = {
         'zh-cn': 'Polling Interval'
     },
 
-    'interval': {
-        'en': 'msec',
-        'de': 'Millisekunden (msec)',
-        'ru': 'msec',
-        'pt': 'msec',
-        'nl': 'msec',
-        'fr': 'msec',
-        'it': 'msec',
-        'es': 'msec',
-        'pl': 'msec',
-        'zh-cn': 'msec'
+    'poll_help': {
+        'en': 'miliseconds',
+        'de': 'Millisekunden',
+        'ru': 'миллисекунды',
+        'pt': 'miliseconds',
+        'nl': 'miliseconds',
+        'fr': 'miliseconds',
+        'it': 'miliseconds',
+        'es': 'miliseconds',
+        'pl': 'miliseconds',
+        'zh-cn': 'miliseconds'
     }
 }
