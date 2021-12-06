@@ -24,7 +24,7 @@ Note: Devices are not sending information activly... therefore, the adapter will
 - All dialogs are in English as for now, DE and RU are in progress. Further translations on demand.
 
 ## ToDo
-- Implementing a table to translate input ID to name of the port (like 31 = HDMI1)
+- Implementing table into admin interface to translate source port ID to port name (like 31 = HDMI1)
 - Supporting PJLink Class 2 protocol
 
 ## How the adapter works
