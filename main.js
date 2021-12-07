@@ -39,7 +39,7 @@ class pjlinkv2 extends utils.Adapter {
      */
     async onReady() {
         // Initialize your adapter here
-        this.log.info('Starting PJLink V2...');
+        this.log.info('Starting PJLink V2 Adapter...');
         // The adapters config (in the instance object everything under the attribute "native") is accessible via
         // this.config:
 
@@ -380,6 +380,7 @@ class pjlinkv2 extends utils.Adapter {
      * @param {() => void} callback
      */
     onUnload(callback) {
+        clearInterval();
         try {
             callback();
         } catch (e) {
