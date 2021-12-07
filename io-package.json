@@ -1,13 +1,15 @@
 {
     "common": {
-        "name": "pjlinkv2",
-        "Title": "PJLinkV2",
-        "version": "2.1.0",
+        "name": "pjlinkv2",        
+        "version": "2.1.1",
+        "description": "Control any PJLink compatible projector or display",
         "news": {
+            "2.1.1": {
+                "en": "fixed adapter check findings"   
+            },
             "2.1.0": {
                 "en": "pushing to 2.1.0"   
             },
-            
             "2.0.6": {
                 "en": "fixed power off handling; implemented InputSourceName; some minor code changes"   
             },
@@ -36,31 +38,6 @@
                 "zh-cn": "首次出版"
             }
         },
-        "title": "PJLinkV2 Adapter",
-        "titleLang": {
-            "en": "PJLinkV2 Adapter",
-            "de": "PJLinkV2 Adapter",
-            "ru": "PJLinkV2 Adapter",
-            "pt": "PJLinkV2 Adapter",
-            "nl": "PJLinkV2 Adapter",
-            "fr": "PJLinkV2 Adapter",
-            "it": "PJLinkV2 Adapter",
-            "es": "PJLinkV2 Adapter",
-            "pl": "PJLinkV2 Adapter",
-            "zh-cn": "PJLinkV2 Adapter"
-        },
-        "desc": {
-            "en": "Control any PJLink Class+1 compatible projector or display",
-            "de": "Steuerung eines Projektors oder Displays der das PJLink Protokoll Class #1 unterstützt",
-            "ru": "Control any PJLink compatible projector or display",
-            "pt": "Control any PJLink compatible projector or display",
-            "nl": "Control any PJLink compatible projector or display",
-            "fr": "Control any PJLink compatible projector or display",
-            "it": "Control any PJLink compatible projector or display",
-            "es": "Control any PJLink compatible projector or display",
-            "pl": "Control any PJLink compatible projector or display",
-            "zh-cn": "Control any PJLink compatible projector or display"
-        },
         "authors": [
             "Author <oberstel@gmail.com>"
         ],
@@ -78,8 +55,8 @@
         "main": "main.js",
         "icon": "pjlink.png",
         "enabled": true,
-        "extIcon": "https://github.com/oberstel/ioBroker.PJLinkV2/blob/master/admin/pjlink.png",
-        "readme": "https://github.com/oberstel/ioBroker.PJLinkV2/blob/master/README.md",
+        "extIcon": "https://github.com/oberstel/iobroker.pjlinkV2/blob/master/admin/pjlink.png",
+        "readme": "https://github.com/oberstel/iobroker.pjlinkV2/blob/master/README.md",
         "loglevel": "info",
         "mode": "daemon",
         "type": "general",
@@ -91,7 +68,7 @@
         "supportCustoms": true,
         "dependencies": [
             {
-                "js-controller": ">=1.4.2"
+                "js-controller": ">=2.0.0"
             }
         ]
     },
