@@ -59,6 +59,8 @@
         "readme": "https://github.com/oberstel/iobroker.pjlinkV2/blob/master/README.md",
         "loglevel": "info",
         "mode": "daemon",
+        "connectionType": "local",
+        "dataSource": "poll",
         "type": "general",
         "compact": true,
         "materialize": true,
