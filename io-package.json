@@ -1,8 +1,16 @@
 {
     "common": {
-        "name": "pjlinkv2",        
+        "name": "pjlinkv2",
+        "title": "PJLinkV2",
+        "titleLang": {
+            "en": "PJLinkV2",
+            "de": "PJLinkV2"
+        },
         "version": "2.1.1",
-        "description": "Control any PJLink compatible projector or display",
+        "desc": {
+            "en": "Control any PJLink compatible projector or display.",
+            "de": "Steuerung eines PJLink kompatiblen Projektor oder Bildschirm."
+        },
         "news": {
             "2.1.1": {
                 "en": "fixed adapter check findings"   
@@ -65,8 +73,6 @@
         "compact": true,
         "materialize": true,
         "materializeTab": true,
-        "link": "",
-        "fa-icon": "pjlink.png",
         "supportCustoms": true,
         "dependencies": [
             {
