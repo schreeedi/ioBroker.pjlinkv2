@@ -39,6 +39,11 @@ The Main script works in four steps:
 Please be aware, that the communication with the projector is not possible if the projector is in standby with power saving feature enabled. Therefore, it will not be possible to turn the project on using this adapter. To do so, disable the power saving feature using the projector configuration (Menu > Settings...).
 
 ## Changelog
+### 2.1.1 (2021/12/11)
+- fixed some adapter check findings
+- added to travis
+- created npm
+
 ### 2.1.0 (2021/12/05)
 - enhanced errorhandling when device is not connected
 - fixed power-off handling
