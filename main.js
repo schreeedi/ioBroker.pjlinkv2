@@ -44,7 +44,7 @@ class pjlinkv2 extends utils.Adapter {
         // this.config:
 
 // Device Properties (defined by admin interface)
-    if (this.config.myiporhost) { 
+    if (this.config.myiporhost) {
         iporhost = this.config.myiporhost;
         port = this.config.myport;
         polltime = this.config.mypolltime;
@@ -536,11 +536,9 @@ function translateErrorState (n) {
         break;
      case '1':
         errorText = errorText + 'Fan Warning, ';
-        this.log.warn('Fan Warning!');
         break;
      case '2':
         errorText = errorText + 'Fan Error, ';
-        this.log.error('Fan Error');
     }
     
     switch (n.substr(1,1)) {
@@ -549,11 +547,9 @@ function translateErrorState (n) {
         break;
      case '1':
         errorText = errorText + 'Lamp Warning, ';
-        this.log.warn('Lamp Warning!');
         break;
      case '2':
         errorText = errorText + 'Lamp Error, ';
-        this.log.error('Lamp Error!');
     }
 
     switch (n.substr(2,1)) {
@@ -562,11 +558,9 @@ function translateErrorState (n) {
         break;
      case '1':
         errorText = errorText + 'Temperature Warning, ';
-        this.log.warn('Temperature Warning!');
         break;
      case '2':
         errorText = errorText + 'Temperature Error, ';
-        this.log.error('Temperature Error!');
     }
 
     switch (n.substr(3,1)) {
@@ -575,11 +569,9 @@ function translateErrorState (n) {
         break;
      case '1':
         errorText = errorText + 'Cover open Warning, ';
-        this.log.warn('Cover open Warning!');
         break;
      case '2':
         errorText = errorText + 'Cover open Error, ';
-        this.log.error('Cover open Error!');
     }
 
     switch (n.substr(4,1)) {
@@ -588,11 +580,9 @@ function translateErrorState (n) {
         break;
      case '1':
         errorText = errorText + 'Filter Warning, ';
-        this.log.warn('Filter Warning!');
         break;
      case '2':
         errorText = errorText + 'Filter Error, ';
-        this.log.error('Fan Error!');
     }
 
     switch (n.substr(5,1)) {
@@ -601,11 +591,9 @@ function translateErrorState (n) {
         break;
      case '1':
         errorText = errorText + 'Other Warning';
-        this.log.warn('Other Warning!');
         break;
      case '2':
         errorText = errorText + 'Other Error';
-        this.log.error('Other Error!');
     }
  return (errorText);
 }
