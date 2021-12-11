@@ -5,7 +5,7 @@
 [![Downloads](https://img.shields.io/npm/dm/iobroker.pjlinkv2.svg)](https://www.npmjs.com/package/ioBroker.pjlinkv2)
 ![Number of Installations (latest)](http://iobroker.live/badges/pjlinkv2-installed.svg)
 ![Number of Installations (stable)](http://iobroker.live/badges/pjlinkv2-stable.svg)
-[![Known Vulnerabilities](https://snyk.io/test/github/Author/ioBroker.pjlinkv2/badge.svg)](https://snyk.io/test/github/Author/ioBroker.pjlinkv2)
+
 [![NPM](https://nodei.co/npm/iobroker.pjlinkv2.png?downloads=true)](https://nodei.co/npm/iobroker.pjlinkv2/)
 
 **Tests:**: [![Travis-CI](http://img.shields.io/travis/oberstel/ioBroker.pjlinkv2/master.svg)](https://app.travis-ci.com/github/oberstel/ioBroker.pjlinkv2)
