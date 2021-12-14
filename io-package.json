@@ -6,14 +6,14 @@
             "en": "PJLinkV2",
             "de": "PJLinkV2"
         },
-        "version": "2.1.2",
+        "version": "2.1.3",
         "desc": {
             "en": "Control any PJLink compatible projector or display.",
             "de": "Steuerung eines PJLink kompatiblen Projektor oder Bildschirm."
         },
         "news": {
-            "2.1.1": {
-                "en": "fixed adapter check findings"   
+            "2.1.3": {
+                "en": "fixed some adapter checker findings"   
             },
             "2.1.0": {
                 "en": "pushing to 2.1.0"   
