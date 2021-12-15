@@ -8,8 +8,7 @@
 
 [![NPM](https://nodei.co/npm/iobroker.pjlinkv2.png?downloads=true)](https://nodei.co/npm/iobroker.pjlinkv2/)
 
-**Tests:**: [![Travis-CI](http://img.shields.io/travis/oberstel/iobroker.pjlinkv2/master.svg)](https://app.travis-ci.com/github/oberstel/iobroker.pjlinkv2)
-                                                                                             
+**Tests:** [![Test and Release](https://github.com/oberstel/ioBroker.pjlinkv2/actions/workflows/test-and-release.yml/badge.svg)](https://github.com/oberstel/ioBroker.pjlinkv2/actions/workflows/test-and-release.yml)                                                                                  
 
 This adapter controls any PJLink compatible projector or display with ioBroker.
 
