@@ -1,5 +1,5 @@
 ![Logo](admin/pjlink.png)
-# ioBroker.pjlinkv2
+# ioBroker.PJLinkV2
 
 [![NPM version](http://img.shields.io/npm/v/iobroker.pjlinkv2.svg)](https://www.npmjs.com/package/iobroker.pjlinkv2)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.pjlinkv2.svg)](https://www.npmjs.com/package/ioBroker.pjlinkv2)
@@ -8,7 +8,7 @@
 
 [![NPM](https://nodei.co/npm/iobroker.pjlinkv2.png?downloads=true)](https://nodei.co/npm/iobroker.pjlinkv2/)
 
-**Tests:**: [![Travis-CI](http://img.shields.io/travis/oberstel/ioBroker.pjlinkv2/master.svg)](https://app.travis-ci.com/github/oberstel/ioBroker.pjlinkv2)
+**Tests:**: [![Travis-CI](http://img.shields.io/travis/oberstel/iobroker.pjlinkv2/master.svg)](https://app.travis-ci.com/github/oberstel/iobroker.pjlinkv2)
                                                                                              
 
 This adapter controls any PJLink compatible projector or display with ioBroker.
@@ -40,8 +40,9 @@ The Main script works in four steps:
 Please be aware, that the communication with the projector is not possible if the projector is in standby with power saving feature enabled. Therefore, it will not be possible to turn the project on using this adapter. To do so, disable the power saving feature using the projector configuration (Menu > Settings...).
 
 ## Changelog
-### 2.1.1 (2021/12/11)
-- fixed some adapter check findings
+### 2.1.4 (2021/12/15)
+- no functional change to 2.1.0 
+- fixed several adapter-check findings to be compliant with ioBroker rules
 - added to travis
 - created npm
 

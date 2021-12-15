@@ -6,17 +6,17 @@
             "en": "PJLinkV2",
             "de": "PJLinkV2"
         },
-        "version": "2.1.3",
+        "version": "2.1.4",
         "desc": {
             "en": "Control any PJLink compatible projector or display.",
             "de": "Steuerung eines PJLink kompatiblen Projektor oder Bildschirm."
         },
         "news": {
-            "2.1.3": {
-                "en": "fixed some adapter checker findings"   
+            "2.1.4": {
+                "en": "fixed several adapter-checker findings"   
             },
             "2.1.0": {
-                "en": "pushing to 2.1.0"   
+                "en": "pushing to 2.1.0 - public flight"   
             },
             "2.0.6": {
                 "en": "fixed power off handling; implemented InputSourceName; some minor code changes"   
@@ -63,8 +63,8 @@
         "main": "main.js",
         "icon": "pjlink.png",
         "enabled": true,
-        "extIcon": "https://github.com/oberstel/iobroker.pjlinkV2/blob/master/admin/pjlink.png",
-        "readme": "https://github.com/oberstel/iobroker.pjlinkV2/blob/master/README.md",
+        "extIcon": "https://github.com/oberstel/iobroker.pjlinkv2/blob/master/admin/pjlink.png",
+        "readme": "https://github.com/oberstel/iobroker.pjlinkv2/blob/master/README.md",
         "loglevel": "info",
         "mode": "daemon",
         "connectionType": "local",
