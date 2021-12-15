@@ -11,7 +11,7 @@
       "name": "puschel"
     }
   ],
-  "homepage": "https://github.com/oberstel/iobroker.pjlinkv2",
+  "homepage": "https://github.com/oberstel/ioBroker.pjlinkv2",
   "license": "MIT",
   "keywords": [
     "projector",
@@ -23,7 +23,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/oberstel/iobroker.pjlinkv2"
+    "url": "https://github.com/oberstel/ioBroker.pjlinkv2"
   },
   "dependencies": {
     "@iobroker/adapter-core": "^2.5.1"
@@ -71,7 +71,7 @@
     "release": "release-script"
   },
   "bugs": {
-    "url": "https://github.com/oberstel/iobroker.pjlinkv2/issues"
+    "url": "https://github.com/oberstel/ioBroker.pjlinkv2/issues"
   },
   "readmeFilename": "README.md"
 }
