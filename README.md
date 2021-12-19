@@ -17,7 +17,6 @@ PJLink is a unified standard for operating and controlling data projectors and d
 Note: Devices are not sending information activly... therefore, the adapter will pull certain information frequently (see polling interval). Do not reduce the polling interval <10 sec. because the device needs up to 2 sec. to answer and the script will query several paramters!
 
 ## Current shortcomings
-- Using a device password is not working - Please avoid setting a password!
 - Audio / Video mute can not be set. Setting these modes is not working correctly right now. It's disabled in the code - can somebody contribute on this?
 - Warum-Up and Cool-Down ist not tested because my device is to giving these information - can somebody contribute on this? 
 - All dialogs are in English as for now, DE and RU are in progress. Further translations on demand.
