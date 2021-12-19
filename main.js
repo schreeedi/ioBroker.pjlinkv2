@@ -238,7 +238,7 @@ class pjlinkv2 extends utils.Adapter {
             this.log.debug('Initial fetching info.class = ' + result);
             // Throw log entry if class1 is selected but class2 supported and vice versa
             if (result != protocol) {
-                this.log.warn(`PJLink Class${protocol} ist configured, but device supports Class${result}. Consider changing your config.`);
+                this.log.warn(`PJLink Class${protocol} ist configured, but device returns Class ${result}. Consider changing your config.`);
             } else {
                 this.log.info(`Communication with ${iporhost} established, using PJLink Class${protocol} protocol.`);
             }
