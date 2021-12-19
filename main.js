@@ -528,7 +528,7 @@ if (module.parent) {
 
 // Some translations...
 function translateErrorState (n) {
-    var errorText;
+ var errorText = "";
 
     switch (n.substr(0,1)) {
      case '0':
