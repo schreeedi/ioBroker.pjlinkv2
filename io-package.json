@@ -6,12 +6,15 @@
             "en": "PJLinkV2",
             "de": "PJLinkV2"
         },
-        "version": "2.1.5",
+        "version": "2.1.6",
         "desc": {
             "en": "Control any PJLink compatible projector or display.",
             "de": "Steuerung eines PJLink kompatiblen Projektor oder Bildschirm."
         },
         "news": {
+            "2.1.6": {
+                "en": "fixed an issue when device authentication is needed and device password is configured; enhanced command processing in lib"   
+            },
             "2.1.5": {
                 "en": "fixed several adapter-checker findings"   
             },
