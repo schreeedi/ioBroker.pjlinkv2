@@ -210,7 +210,7 @@ class pjlinkv2 extends utils.Adapter {
         this.log.debug('Create Object .info.lightingHours#2');
         await this.setObjectNotExistsAsync('info.lightingHours#2', {
             type: 'state',
-            common: {name: 'Lighting hours for lamp #2', type: 'boolean', role: 'state', read: true, write: false},
+            common: {name: 'Lighting hours for lamp #2', type: 'string', role: 'state', read: true, write: false},
             native: {},
         });
         
