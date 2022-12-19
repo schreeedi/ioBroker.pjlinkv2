@@ -1,14 +1,16 @@
 ![Logo](admin/pjlink.png)
-# ioBroker.PJLinkV2
+# iobroker.pjlinkv2-s
 
-[![NPM version](http://img.shields.io/npm/v/iobroker.pjlinkv2.svg)](https://www.npmjs.com/package/iobroker.pjlinkv2)
-[![Downloads](https://img.shields.io/npm/dm/iobroker.pjlinkv2.svg)](https://www.npmjs.com/package/ioBroker.pjlinkv2)
+## This is a fork by Schreeedi to fix always powering off after powering on issue
+
+[![NPM version](http://img.shields.io/npm/v/iobroker.pjlinkv2-s.svg)](https://www.npmjs.com/package/iobroker.pjlinkv2-s)
+[![Downloads](https://img.shields.io/npm/dm/iobroker.pjlinkv2-s.svg)](https://www.npmjs.com/package/iobroker.pjlinkv2-s)
 ![Number of Installations (latest)](http://iobroker.live/badges/pjlinkv2-installed.svg)
 ![Number of Installations (stable)](http://iobroker.live/badges/pjlinkv2-stable.svg)
 
-[![NPM](https://nodei.co/npm/iobroker.pjlinkv2.png?downloads=true)](https://nodei.co/npm/iobroker.pjlinkv2/)
+[![NPM](https://nodei.co/npm/iobroker.pjlinkv2-s.png?downloads=true)](https://nodei.co/npm/iobroker.pjlinkv2-s/)
 
-**Tests:** [![Test and Release](https://github.com/oberstel/ioBroker.pjlinkv2/actions/workflows/test-and-release.yml/badge.svg)](https://github.com/oberstel/ioBroker.pjlinkv2/actions/workflows/test-and-release.yml)                                                                                  
+**Tests:** [![Test and Release](https://github.com/oberstel/iobroker.pjlinkv2-s/actions/workflows/test-and-release.yml/badge.svg)](https://github.com/oberstel/iobroker.pjlinkv2-s/actions/workflows/test-and-release.yml)                                                                                  
 
 This adapter controls any PJLink compatible projector or display with ioBroker.
 
@@ -39,6 +41,10 @@ The Main script works in four steps:
 Please be aware, that the communication with the projector is not possible if the projector is in standby with power saving feature enabled. Therefore, it will not be possible to turn the project on using this adapter. To do so, disable the power saving feature using the projector configuration (Menu > Settings...).
 
 ## Changelog
+### 2.1.6-s (2021/12/19)
+- fixed an issue when device authentication is needed and device password is configured
+- enhanced command processing in lib
+
 ### 2.1.6 (2021/12/19)
 - fixed an issue when device authentication is needed and device password is configured
 - enhanced command processing in lib
