@@ -10,7 +10,7 @@
 
 [![NPM](https://nodei.co/npm/iobroker.pjlinkv2-s.png?downloads=true)](https://nodei.co/npm/iobroker.pjlinkv2-s/)
 
-**Tests:** [![Test and Release](https://github.com/oberstel/iobroker.pjlinkv2-s/actions/workflows/test-and-release.yml/badge.svg)](https://github.com/oberstel/iobroker.pjlinkv2-s/actions/workflows/test-and-release.yml)                                                                                  
+**Tests:** [![Test and Release](https://github.com/schreeedi/iobroker.pjlinkv2-s/actions/workflows/test-and-release.yml/badge.svg)](https://github.com/schreeedi/iobroker.pjlinkv2-s/actions/workflows/test-and-release.yml)                                                                                  
 
 This adapter controls any PJLink compatible projector or display with ioBroker.
 
@@ -41,9 +41,8 @@ The Main script works in four steps:
 Please be aware, that the communication with the projector is not possible if the projector is in standby with power saving feature enabled. Therefore, it will not be possible to turn the project on using this adapter. To do so, disable the power saving feature using the projector configuration (Menu > Settings...).
 
 ## Changelog
-### 2.1.6-s (2021/12/19)
-- fixed an issue when device authentication is needed and device password is configured
-- enhanced command processing in lib
+### 2.1.6-s (2022/12/19)
+- fixed an issue with suddenly powering off during warm up phase
 
 ### 2.1.6 (2021/12/19)
 - fixed an issue when device authentication is needed and device password is configured

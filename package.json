@@ -8,7 +8,7 @@
   },
   "contributors": [
   ],
-  "homepage": "https://github.com/schreeedi/ioBroker.pjlinkv2-s",
+  "homepage": "https://github.com/schreeedi/ioBroker.pjlinkv2",
   "license": "MIT",
   "keywords": [
     "projector",
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/schreeedi/ioBroker.pjlinkv2-s"
+    "url": "https://github.com/schreeedi/ioBroker.pjlinkv2"
   },
   "dependencies": {
     "@iobroker/adapter-core": "^2.6.7",
@@ -77,7 +77,7 @@
     "release": "release-script"
   },
   "bugs": {
-    "url": "https://github.com/Schreeedi/ioBroker.pjlinkv2-s/issues"
+    "url": "https://github.com/Schreeedi/ioBroker.pjlinkv2/issues"
   },
   "readmeFilename": "README.md"
 }
