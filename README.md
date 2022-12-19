@@ -1,12 +1,12 @@
 ![Logo](admin/pjlink.png)
 # iobroker.pjlinkv2-s
 
-## This is a fork by Schreeedi to fix always powering off after powering on issue
+## This is a fork by schreeedi to fix always powering off after powering on issue
 
 [![NPM version](http://img.shields.io/npm/v/iobroker.pjlinkv2-s.svg)](https://www.npmjs.com/package/iobroker.pjlinkv2-s)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.pjlinkv2-s.svg)](https://www.npmjs.com/package/iobroker.pjlinkv2-s)
-![Number of Installations (latest)](http://iobroker.live/badges/pjlinkv2-installed.svg)
-![Number of Installations (stable)](http://iobroker.live/badges/pjlinkv2-stable.svg)
+![Number of Installations (latest)](http://iobroker.live/badges/pjlinkv2-s-installed.svg)
+![Number of Installations (stable)](http://iobroker.live/badges/pjlinkv2-s-stable.svg)
 
 [![NPM](https://nodei.co/npm/iobroker.pjlinkv2-s.png?downloads=true)](https://nodei.co/npm/iobroker.pjlinkv2-s/)
 

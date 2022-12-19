@@ -1,4 +1,6 @@
 .git
+.github
+.vscode
 .idea
 *.code-workspace
 node_modules
@@ -12,3 +14,6 @@ Thumbs.db
 # i18n intermediate files
 admin/i18n/flat.txt
 admin/i18n/*/flat.txt
+
+# ioBroker dev-server
+.dev-server/

@@ -1,17 +1,14 @@
 {
-  "name": "iobroker.pjlinkv2",
-  "version": "2.1.6",
+  "name": "iobroker.pjlinkv2-s",
+  "version": "2.1.6-s",
   "description": "Control any PJLink compatible device",
   "author": {
-    "name": "oberstel",
-    "email": "oberstel@gmail.com"
+    "name": "schreeedi",
+    "email": "schreeedi@msn.com"
   },
   "contributors": [
-    {
-      "name": "puschel"
-    }
   ],
-  "homepage": "https://github.com/oberstel/ioBroker.pjlinkv2",
+  "homepage": "https://github.com/schreeedi/ioBroker.pjlinkv2-s",
   "license": "MIT",
   "keywords": [
     "projector",
@@ -23,10 +20,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/oberstel/ioBroker.pjlinkv2"
+    "url": "https://github.com/schreeedi/ioBroker.pjlinkv2-s"
   },
   "dependencies": {
-    "@iobroker/adapter-core": "^2.5.1",
+    "@iobroker/adapter-core": "^2.6.7",
     "mock-http-server": "^1.4.5",
     "node-schedule": "^2.0.0",
     "ts-json-object": "^0.2.10"
@@ -80,7 +77,7 @@
     "release": "release-script"
   },
   "bugs": {
-    "url": "https://github.com/oberstel/ioBroker.pjlinkv2/issues"
+    "url": "https://github.com/Schreeedi/ioBroker.pjlinkv2-s/issues"
   },
   "readmeFilename": "README.md"
 }

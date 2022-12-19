@@ -1,17 +1,20 @@
 {
     "common": {
-        "name": "pjlinkv2",
-        "title": "PJLinkV2",
+        "name": "pjlinkv2-s",
+        "title": "PJLinkV2 (schreeedi)",
         "titleLang": {
-            "en": "PJLinkV2",
-            "de": "PJLinkV2"
+            "en": "PJLinkV2 (schreeedi)",
+            "de": "PJLinkV2 (schreeedi)"
         },
-        "version": "2.1.6",
+        "version": "2.1.6-s",
         "desc": {
             "en": "Control any PJLink compatible projector or display.",
             "de": "Steuerung eines PJLink kompatiblen Projektor oder Bildschirm."
         },
         "news": {
+            "2.1.6-s": {
+                "en": "fixed an issue that always powers off after powering on (during warm up)"   
+            },
             "2.1.6": {
                 "en": "fixed an issue when device authentication is needed and device password is configured; enhanced command processing in lib"   
             },
@@ -50,7 +53,7 @@
             }
         },
         "authors": [
-            "Author <oberstel@gmail.com>"
+            "Author <schreeedi@msn.com>"
         ],
         "keywords": [
             "ioBroker",
@@ -66,8 +69,8 @@
         "main": "main.js",
         "icon": "pjlink.png",
         "enabled": true,
-        "extIcon": "https://github.com/oberstel/iobroker.pjlinkv2/blob/master/admin/pjlink.png",
-        "readme": "https://github.com/oberstel/iobroker.pjlinkv2/blob/master/README.md",
+        "extIcon": "https://github.com/Schreeedi/iobroker.pjlinkv2-s/blob/master/admin/pjlink.png",
+        "readme": "https://github.com/Schreeedi/iobroker.pjlinkv2-s/blob/master/README.md",
         "loglevel": "info",
         "mode": "daemon",
         "connectionType": "local",
