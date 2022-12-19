@@ -1,5 +1,5 @@
 ![Logo](admin/pjlink.png)
-# iobroker.pjlinkv2-s
+# iobroker.pjlinkv2
 
 ## This is a fork by schreeedi to fix always powering off after powering on issue
 
@@ -10,7 +10,7 @@
 
 [![NPM](https://nodei.co/npm/iobroker.pjlinkv2-s.png?downloads=true)](https://nodei.co/npm/iobroker.pjlinkv2-s/)
 
-**Tests:** [![Test and Release](https://github.com/schreeedi/iobroker.pjlinkv2-s/actions/workflows/test-and-release.yml/badge.svg)](https://github.com/schreeedi/iobroker.pjlinkv2-s/actions/workflows/test-and-release.yml)                                                                                  
+**Tests:** [![Test and Release](https://github.com/schreeedi/iobroker.pjlinkv2/actions/workflows/test-and-release.yml/badge.svg)](https://github.com/schreeedi/iobroker.pjlinkv2/actions/workflows/test-and-release.yml)                                                                                  
 
 This adapter controls any PJLink compatible projector or display with ioBroker.
 
